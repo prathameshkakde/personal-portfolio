@@ -6,8 +6,17 @@ body {
     color: #111827;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+a, .btn {
+    cursor: pointer;
+}
+
 .container {
-    width: 60%;
+    max-width: 900px;
+    width: 90%;
     margin: 60px auto;
     background: white;
     padding: 40px;
