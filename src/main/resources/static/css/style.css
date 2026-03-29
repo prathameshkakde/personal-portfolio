@@ -109,3 +109,16 @@ a:hover {
 .btn.secondary:hover {
     background-color: #5a6268;
 }
+
+.skills {
+    margin-top: 15px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
