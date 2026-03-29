@@ -110,15 +110,21 @@ a:hover {
     background-color: #5a6268;
 }
 
-.skills {
-    margin-top: 15px;
-}
-
 .skills span {
     display: inline-block;
     background: #e9ecef;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 6px;
+    border-radius: 25px;
     font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills span i {
+    margin-right: 6px;
+}
+
+.skills span:hover {
+    background: #007bff;
+    color: white;
 }
