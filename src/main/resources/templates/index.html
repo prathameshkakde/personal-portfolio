@@ -95,17 +95,30 @@
 
     <hr>
 
-    <h3>Contact</h3>
+    <h3>Contact Me</h3>
 
-    <p><b>Phone:</b> +91 9172926205</p>
-    <p><b>Email:</b> kakdeprathamesh860@gmail.com</p>
+    <form action="/contact" method="post">
 
-    <p>
-        <b>LinkedIn:</b>
-        <a href="https://www.linkedin.com/in/prathamesh-kakde/" target="_blank">
-            View Profile
-        </a>
-    </p>
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" required></textarea><br><br>
+
+        <div th:if="${param.success}">
+            <p style="color: green;">Message sent successfully!</p>
+        </div>
+
+        <div th:if="${param.error}">
+            <p style="color: red;">Failed to send message. Please try again.</p>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+
+    </form>
 
 </div>
 
