@@ -108,13 +108,7 @@
         <label>Message:</label><br>
         <textarea name="message" rows="4" required></textarea><br><br>
 
-        <div th:if="${param.success}">
-            <p style="color: green;">Message sent successfully!</p>
-        </div>
-
-        <div th:if="${param.error}">
-            <p style="color: red;">Failed to send message. Please try again.</p>
-        </div>
+        <div id="form-message" style="display:none; margin-bottom:15px;"></div>
 
         <button type="submit" class="btn">Send Message</button>
 
@@ -128,17 +122,23 @@
     (function(){
         emailjs.init("JQMoAZwpTSXmqjYfE");
     })();
-
     document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault();
+    event.preventDefault();
 
-        emailjs.sendForm("service_df3ci39", "template_p9p1g5b", this)
-            .then(function() {
-                alert("Message sent successfully!");
-            }, function(error) {
-                alert("Failed to send message.");
-                console.log(error);
-            });
+    const messageBox = document.getElementById("form-message");
+    messageBox.style.display = "block";
+    messageBox.style.color = "black";
+    messageBox.innerHTML = "⏳ Sending message...";
+
+    emailjs.sendForm("service_df3ci39", "template_p9p1g5b", this)
+        .then(function() {
+            messageBox.style.color = "green";
+            messageBox.innerHTML = "✅ Message sent successfully!";
+        }, function(error) {
+            messageBox.style.color = "red";
+            messageBox.innerHTML = "❌ Failed to send message.";
+            console.log(error);
+        });
     });
 </script>
 

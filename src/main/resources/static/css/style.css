@@ -153,3 +153,9 @@ input, textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+#form-message {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
