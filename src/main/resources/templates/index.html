@@ -97,7 +97,7 @@
 
     <h3>Contact Me</h3>
 
-    <form action="/contact" method="post">
+    <form id="contact-form">
 
         <label>Name:</label><br>
         <input type="text" name="name" required><br><br>
@@ -121,6 +121,26 @@
     </form>
 
 </div>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+    (function(){
+        emailjs.init("JQMoAZwpTSXmqjYfE");
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_df3ci39", "template_p9p1g5b", this)
+            .then(function() {
+                alert("Message sent successfully!");
+            }, function(error) {
+                alert("Failed to send message.");
+                console.log(error);
+            });
+    });
+</script>
 
 </body>
 
