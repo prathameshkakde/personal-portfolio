@@ -1,31 +1,41 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eef2f5;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f9fafb;
     margin: 0;
     padding: 0;
+    color: #111827;
 }
 
 .container {
     width: 60%;
-    margin: 50px auto;
+    margin: 60px auto;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.05);
 }
 
 h1 {
-    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 h2 {
-    color: #555;
-    margin-bottom: 20px;
+    color: #6b7280;
+    font-weight: 400;
 }
 
 h3 {
-    margin-top: 30px;
-    color: #2c3e50;
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
 }
 
 .project {
@@ -90,17 +100,17 @@ a:hover {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 18px;
     margin: 5px;
-    background-color: #007bff;
+    background-color: #2563eb;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #1d4ed8;
     transform: scale(1.05);
 }
 
@@ -128,7 +138,7 @@ a:hover {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid #2563eb;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -136,10 +146,6 @@ a:hover {
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
-}
-
-h3 {
-    margin-top: 40px;
 }
 
 form {
@@ -192,7 +198,7 @@ input, textarea {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    border-left: 5px solid #28a745;
+    border-left: 5px solid #22c55e;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
