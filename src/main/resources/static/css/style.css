@@ -186,3 +186,31 @@ input, textarea {
         font-size: 20px;
     }
 }
+
+.experience-card {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #28a745;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+.experience-card h4 {
+    margin-bottom: 5px;
+}
+
+.experience-card p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.experience-card ul {
+    margin-left: 20px;
+}
